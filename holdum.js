@@ -15,5 +15,6 @@ function call() {
     num.textContent = Number(num.textContent)+1
 }
 
+console.log("Hello World")
 
 // alert(num.textContent);
