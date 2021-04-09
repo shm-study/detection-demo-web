@@ -42,4 +42,5 @@ def divide():
     b = float(request.args["b"])
     return {"ans" : a / b}
 
-app.run()
+if __name__ == "__main__":
+   app.run(host='0.0.0.0', port=5000)
