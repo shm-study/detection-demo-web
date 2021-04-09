@@ -1,5 +1,6 @@
 import flask 
 from flask import request, jsonify 
+from flask_cors import CORS
 
 
 '''
@@ -9,6 +10,7 @@ https://wings2pc.tistory.com/entry/%EC%9B%B9-%EC%95%B1%ED%94%84%EB%A1%9C%EA%B7%B
 
 '''
 app = flask.Flask(__name__)
+CORS(app)
 app.config["DEBUG"] = True
 
 
