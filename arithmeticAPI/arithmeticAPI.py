@@ -1,5 +1,5 @@
 import flask 
-from flask import request
+from flask import request, jsonify 
 
 
 '''
@@ -22,25 +22,25 @@ def home():
 def plus():
     a = float(request.args["a"])
     b = float(request.args["b"])
-    return {"ans" : a + b}
+    return jsonify({"ans" : a + b})
 
 @app.route('/minus', methods=['GET'])
 def minus():
     a = float(request.args["a"])
     b = float(request.args["b"])
-    return {"ans" : a - b}
+    return jsonify({"ans" : a - b})
 
 @app.route('/multiply', methods=['GET'])
 def multiply():
     a = float(request.args["a"])
     b = float(request.args["b"])
-    return {"ans" : a * b}
+    return jsonify({"ans" : a * b})
 
 @app.route('/divide', methods=['GET'])
 def divide():
     a = float(request.args["a"])
     b = float(request.args["b"])
-    return {"ans" : a / b}
+    return jsonify({"ans" : a / b})
 
 if __name__ == "__main__":
    app.run(host='0.0.0.0', port=5000)
