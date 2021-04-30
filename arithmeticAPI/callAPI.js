@@ -1,11 +1,11 @@
-
+url = "http://3.37.56.32:5000";
 
 $(function() {
 
     $('#plus').click(function() {
 
         $.ajax({
-            url: "http://52.78.241.160:5000/plus", // 클라이언트가 요청을 보낼 서버의 URL 주소
+            url: url + "/plus", // 클라이언트가 요청을 보낼 서버의 URL 주소
             data: { a: $('#a').val(), b: $('#b').val() },                // HTTP 요청과 함께 서버로 보낼 데이터
             type: "GET",                             // HTTP 요청 방식(GET, POST)
             dataType: "json"                         // 서버에서 보내줄 데이터의 타입
@@ -25,7 +25,7 @@ $(function() {
     $('#minus').click(function() {
 
         $.ajax({
-            url: "http://52.78.241.160:5000/minus", // 클라이언트가 요청을 보낼 서버의 URL 주소
+            url: url + "/minus", // 클라이언트가 요청을 보낼 서버의 URL 주소
             data: { a: $('#a').val(), b: $('#b').val() },                // HTTP 요청과 함께 서버로 보낼 데이터
             type: "GET",                             // HTTP 요청 방식(GET, POST)
             dataType: "json"                         // 서버에서 보내줄 데이터의 타입
@@ -44,7 +44,7 @@ $(function() {
     $('#multiply').click(function() {
 
         $.ajax({
-            url: "http://52.78.241.160:5000/multiply", // 클라이언트가 요청을 보낼 서버의 URL 주소
+            url: url + "/multiply", // 클라이언트가 요청을 보낼 서버의 URL 주소
             data: { a: $('#a').val(), b: $('#b').val() },                // HTTP 요청과 함께 서버로 보낼 데이터
             type: "GET",                             // HTTP 요청 방식(GET, POST)
             dataType: "json"                         // 서버에서 보내줄 데이터의 타입
@@ -63,7 +63,7 @@ $(function() {
     $('#divide').click(function() {
 
         $.ajax({
-            url: "http://52.78.241.160:5000/divide", // 클라이언트가 요청을 보낼 서버의 URL 주소
+            url: url + "/divide", // 클라이언트가 요청을 보낼 서버의 URL 주소
             data: { a: $('#a').val(), b: $('#b').val() },                // HTTP 요청과 함께 서버로 보낼 데이터
             type: "GET",                             // HTTP 요청 방식(GET, POST)
             dataType: "json"                         // 서버에서 보내줄 데이터의 타입
